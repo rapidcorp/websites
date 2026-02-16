@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Zeye Digital</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #0a0a0a;
+      color: #e0e0e0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+      color: #fff;
+    }
+
+    .subtitle {
+      color: #888;
+      font-size: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      .projects { grid-template-columns: 1fr; }
+    }
+
+    .card {
+      background: #141414;
+      border: 1px solid #222;
+      border-radius: 12px;
+      padding: 2rem;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      border-color: #444;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    }
+
+    .card-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .card:nth-child(1) .card-label {
+      background: rgba(255, 149, 0, 0.15);
+      color: #ff9500;
+    }
+
+    .card:nth-child(2) .card-label {
+      background: rgba(0, 122, 255, 0.15);
+      color: #007aff;
+    }
+
+    .card h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 0.6rem;
+      color: #fff;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #888;
+      line-height: 1.5;
+      margin-bottom: 1.2rem;
+    }
+
+    .card .arrow {
+      font-size: 0.85rem;
+      color: #555;
+      transition: color 0.3s;
+    }
+
+    .card:hover .arrow { color: #fff; }
+
+    footer {
+      margin-top: 4rem;
+      color: #444;
+      font-size: 0.8rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>Our Projects</h1>
+  <p class="subtitle">Client portfolio showcase</p>
+
+  <div class="projects">
+    <a href="/mla/" class="card">
+      <span class="card-label">Political</span>
+      <h2>Udailal Dangi</h2>
+      <p>MLA Vallabhnagar, Udaipur, Rajasthan. Official constituency website with development work, schemes &amp; contact.</p>
+      <span class="arrow">View Project &rarr;</span>
+    </a>
+
+    <a href="/web-weaver/" class="card">
+      <span class="card-label">Personal Brand</span>
+      <h2>Insp. Himanshu Singh Rajawat</h2>
+      <p>The Singham of Rajasthan. Police Officer, Filmmaker &amp; Motivational Speaker. Producer of Sagwaan.</p>
+      <span class="arrow">View Project &rarr;</span>
+    </a>
+  </div>
+
+  <footer>Zeye Digital</footer>
+</body>
+</html>
