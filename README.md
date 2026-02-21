@@ -1,17 +1,40 @@
 # Websites
 
-A collection of web projects for various purposes.
+Static multi-project websites bundle served from nginx on `project.zeye.app`.
 
 ## Projects
 
-- **mla** - Udailal Dangi - MLA Vallabhnagar website
-- **web-weaver** - Web development project
-- **landing** - Landing page project
+- `landing` -> `/`
+- `mla` -> `/mla/`
+- `web-weaver` -> `/web-weaver/`
+- `BVR_SUPERMARKET` -> `/bvr-supermarket/`
 
-## Setup
+## Operations
 
-Each project has its own setup instructions in their respective README files.
+Use the project control script:
 
-## Deployment
+```bash
+./server.sh rebuild   # build static assets
+./server.sh start     # install nginx site + reload
+./server.sh status    # listener/domain checks
+./server.sh stop      # disable nginx site
+```
 
-Projects are deployed to various hosting platforms based on their requirements.
+## Runtime
+
+- Local nginx static site listens on port `2005` (`projects.conf`)
+- Public domain is `https://project.zeye.app`
+
+## Validation
+
+Run:
+
+```bash
+./scripts/verify_websites_setup.sh
+```
+
+It checks:
+- required static build outputs exist
+- nginx site files/symlink exist
+- nginx has active listener on `2005`
+- local domain probes return HTTP status
